@@ -103,8 +103,8 @@ class Movie {
     const genre = document.querySelector('#genre').value;
 
     // Validate
-    if(title === '' || production === '' || director === '' || genre === '') {
-      UI.showAlert('Please fill in all fields', 'danger');
+    if(title === '' && production === '' && director === '' && genre === '') {
+      UI.showAlert('Please fill in all fields', 'info');
     } else {
       // Instatiate
       const movie = new Movie(title, production, director, genre);
