@@ -26,7 +26,7 @@ class Movie {
         <td>${movie.production}</td>
         <td>${movie.director}</td>
         <td>${movie.genre}</td>
-        <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
+        <td><a href="#" class="btn btn-danger btn-sm delete">x</a></td>
       `;
 
       list.appendChild(row);
@@ -46,7 +46,6 @@ class Movie {
       const form = document.querySelector('#movie-form');
       container.insertBefore(div, form);
 
-      // Vanish in 3 seconds
       setTimeout(() => document.querySelector('.alert').remove(), 3000);
     }
 
@@ -58,7 +57,7 @@ class Movie {
     }
   }
 
-  // Store Class: Handles Storage
+  // Handles Storage
   class Store {
     static getMovies() {
       let movies;
@@ -67,7 +66,6 @@ class Movie {
       } else {
         movies = JSON.parse(localStorage.getItem('movies'));
       }
-
       return movies;
     }
 
